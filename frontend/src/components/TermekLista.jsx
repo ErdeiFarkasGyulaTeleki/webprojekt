@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 
 import api from '../api/axiosInstance';
+import TermekKartya from './TermekKartya';
 
 export default function TermekLista() {
   const [termekek, setTermekek] = useState([]);
@@ -21,17 +22,11 @@ export default function TermekLista() {
   return (
     <div>
       <h2>Termékek</h2>
-      <ul>
-        {
-          termekek.map((termek) => (
-            <li key={termek.id}>
-              <h3>{termek.nev}</h3>
-              <p>Ár: {termek.ar} Ft</p>
-              <p>Készlet: {termek.keszlet}</p>
-            </li>
-          ))
-        }
-      </ul>
+      {
+        termekek.map((termek) => (
+          <TermekKartya key={termek.id} termek={termek} />
+        ))
+      }
     </div>
-  );
+  )
 }
