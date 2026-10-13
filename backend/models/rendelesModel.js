@@ -1,6 +1,6 @@
 import pool from '..*/config/db.js';
 
-const RendelesekModel = {
+const RendelesModel = {
   async getAll() {
     const [rows] = await pool.query('SELECT * FROM rendelesek');
     return rows;
@@ -21,4 +21,4 @@ const RendelesekModel = {
   }
 };
 
-export default RendelesekModel;
+export default RendelesModel;
