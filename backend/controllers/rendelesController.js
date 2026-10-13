@@ -19,6 +19,9 @@ const RendelesController = {
       } else {
         res.status(404).json({ error: "A rendelés nem található." });
       }
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: "Hiba történt a rendelés lekérése során." });
     }
   },
 
