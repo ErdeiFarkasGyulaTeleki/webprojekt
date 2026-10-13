@@ -1,4 +1,4 @@
-import Rendelesek from '../models/rendelesekModel.js';
+import Rendelesek from '../models/RendelesekModel.js';
 
 const RendelesController = {
   async getAll(req, res) {

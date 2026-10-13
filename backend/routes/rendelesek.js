@@ -7,4 +7,4 @@ router.get('/', rendelesController.getAll);
 router.get('/:id', rendelesController.getById);
 router.post('/', rendelesController.create);
 
-export default rendelesekRouter;
+export default router;

@@ -7,4 +7,4 @@ router.get("/", termekController.getAll);
 router.get("/:id", termekController.getById);
 router.post("/", termekController.create);
 
-export default termekekRouter;
+export default router;
